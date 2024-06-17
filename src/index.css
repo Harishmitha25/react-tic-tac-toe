@@ -74,6 +74,23 @@ h1 {
   border: 2px solid transparent;
 }
 
+#players li {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  border: 2px solid transparent;
+}
+
+@media (max-width: 667px) {
+  #players {
+    flex-direction: column;
+  }
+
+  #players li {
+    width: 100%;
+  }
+}
+
 #players.highlight-player li.active {
   border-color: #f6e35a;
   animation: pulse 2s infinite ease-in-out;
@@ -283,6 +300,80 @@ ol {
   color: #23221f;
   font: inherit;
   margin-top: 1.5rem;
+}
+
+#game-board button {
+  width: 8rem;
+  height: 8rem;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: #aca788;
+  color: #3f3b00;
+  cursor: pointer;
+  font-family: "Caprasimo", cursive;
+  padding: 1rem;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+  #game-board {
+    max-width: 60%;
+    gap: 0.5rem;
+  }
+
+  #game-board button {
+    width: 80px;
+    height: 80px;
+    font-size: 1.5rem;
+  }
+}
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 3rem auto;
+  padding: 0;
+  list-style: none;
+  max-width: 300px; /* Adjust this value as needed */
+}
+
+#game-board li {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game-board button {
+  width: 8rem;
+  height: 8rem;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: #aca788;
+  color: #3f3b00;
+  cursor: pointer;
+  font-family: "Caprasimo", cursive;
+  padding: 1rem;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+  #game-board {
+    max-width: 60%;
+    gap: 0.5rem;
+  }
+
+  #game-board button {
+    width: 80px;
+    height: 80px;
+    font-size: 1.5rem;
+  }
 }
 
 @keyframes slide-in-from-left {
